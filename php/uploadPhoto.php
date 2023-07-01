@@ -31,9 +31,20 @@ if(isset($_FILES['arquivo'])) {
         $status = false;
     }
 
-    $diretorio = 'uploads/'  . $_FILES['arquivo']['name'];
+    $diretorio = 'uploads/' . $_FILES['arquivo']['name'];
 
-    move_uploaded_file($_FILES['arquivo']['tmp_name'], $diretorio);
+    if($status) {
+        move_uploaded_file($_FILES['arquivo']['tmp_name'], $diretorio);
+
+        $conn = new mysqli("localhost", "root", "", "projetoshop");
+
+        $sql = "UPDATE usuario SET imgProfile = ? WHERE id = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("si", $diretorio, $idUsuario);
+        $stmt->execute();
+    }
+
+    header("Location: ../pages/myAccount.html");
 
 } else {
     echo 'Não foi possivel ler o arquivo';

@@ -16,7 +16,7 @@
 
     $conn = new mysqli("localhost", "root", "", "projetoshop");
 
-    $sql = "SELECT name, lastName, imgProfile FROM usuario WHERE id = ?";
+    $sql = "SELECT name, lastName, imgProfile, dateCreate FROM usuario WHERE id = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("i", $idUsuario);
     $stmt->execute();
@@ -24,7 +24,7 @@
 
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
-        $response = array("imgProfile" => $row['imgProfile'], "name" => $row['name'],"lastName" => $row['lastName']);
+        $response = array("imgProfile" => $row['imgProfile'], "name" => $row['name'],"lastName" => $row['lastName'], "dateCreate" => $row['dateCreate']);
         echo json_encode($response);
     } else {
         echo json_encode(array());

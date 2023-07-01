@@ -27,7 +27,7 @@ function sucess(element) {
 }
 
 $('#createNewAccount').click(function(event) {
-    event.preventDefault();
+    // event.preventDefault();
     $(document).ready(function() {
         $.ajax({
             url: '../php/getDb.php',

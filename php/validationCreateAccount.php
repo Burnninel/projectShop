@@ -12,6 +12,8 @@
         $lastName = isset($_POST["lastName"]) ? $_POST["lastName"] : "";
         $email = isset($_POST["email"]) ? $_POST["email"] : "";
         $password = isset($_POST["password"]) ? $_POST["password"] : "";
+        $dataRegistro = (new DateTime())->format('Y-m-d');
+        echo $dataRegistro;
 
         $userInvalid = true;
 
@@ -22,7 +24,7 @@
         }
 
         echo '<pre>';
-        var_dump($name, $lastName, $email, $password);
+        var_dump($name, $lastName, $email, $password, $dataRegistro);
 
         if(!$userInvalid) {
             
@@ -35,8 +37,8 @@
             if ($existingUser) {
                 echo "O email já está cadastrado.";
             } else {
-                $stmt = $conn->prepare("INSERT INTO usuario (name, lastname, email, password) VALUES (?, ?, ?, ?)");
-                $stmt->bind_param("ssss", $name, $lastName, $email, $password);
+                $stmt = $conn->prepare("INSERT INTO usuario (name, lastname, email, password, dateCreate) VALUES (?, ?, ?, ?, ?)");
+                $stmt->bind_param("sssss", $name, $lastName, $email, $password, $dataRegistro);
 
                 if ($stmt->execute() === TRUE) {
                     echo "Dados enviados com sucesso.";

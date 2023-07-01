@@ -3,16 +3,17 @@ $(document).ready(function () {
 
     function buscarImagemPerfil(idUsuario) {
         $.ajax({
-            url: '../php/getImagemPerfil.php',
+            url: '../php/getInfosUser.php',
             type: 'POST',
             dataType: 'json',
-            data: { idUsuario: idUsuario },
+            data: { idUsuario: idUsuario,  data: "DATE_FORMAT(dateCreate, '%d/%m/%Y')"},
             success: function (data) {
                 console.log(data.name)
                 console.log(data.lastName)
                 if (data.name !== '') {
-                    $('#myNickname').text(data.name + ' ' + data.lastName)
+                    $('#myNickname').text(data.name + ' ' + data.lastName);
                 }
+                $('#textDate').text(formatarData(data.dateCreate));
                 if (data.imgProfile !== null) {
                     var img = `<img src="../php/${data.imgProfile}" alt="myProfilePic" class="myProfilePic">`;
                     $('#myPhoto').html(img);
@@ -24,7 +25,17 @@ $(document).ready(function () {
         });
     };
 
-    var idUsuarioLogado = "";
+    function formatarData(data) {
+        var dataAjustada = new Date(data);
+        dataAjustada.setDate(dataAjustada.getDate() + 1);
+
+        var dia = String(dataAjustada.getDate()).padStart(2, '0');
+        var mes = String(dataAjustada.getMonth() + 1).padStart(2, '0');
+        var ano = dataAjustada.getFullYear();
+        return dia + '/' + mes + '/' + ano;
+    }
+
+    var idUsuarioLogado = '';
 
     $.ajax({
         url: '../php/getDb.php',
