@@ -1,0 +1,16 @@
+.containerImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#img {
+    height: 1600px;
+    width: 1300px;
+    position: absolute;
+    top: 800px;
+    outline: none;
+    user-select: none;
+    caret-color: transparent;
+}

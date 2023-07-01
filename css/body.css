@@ -1,0 +1,14 @@
+body {
+    overflow: hidden;
+    height: 100vh;
+}
+  
+body::-webkit-scrollbar {
+    background-color: #262323;
+    width: 4px;
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 5px;
+}

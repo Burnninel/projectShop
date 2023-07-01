@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../css/body.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/img.css">
+  <link rel="stylesheet" href="../css/signIn.css">
+  <link rel="stylesheet" href="../css/singUp.css">
+  <link rel="stylesheet" href="../css/account.css">
+  <link rel="stylesheet" href="../css/elementsForms.css">
+  <link rel="stylesheet" href="../css/modalUploadPhoto.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+  <title>Entre ou Cadastre-se</title>
+
+</head>
+
+<body>
+
+  <header id="header">
+
+    <div id="menu">menu</div>
+
+    <div id="logo">StreetSoul</div>
+
+    <div class="dropdown">
+
+      <div id="myProfile" class="btn dropdown-toggle dropdown-toggle-unstyled" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="svgProfile">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+        </svg>
+      </div>
+
+      <ul class="dropdown-menu">
+        <li><button class="item-dropdown" id="signIn">Entrar</button></li>
+        <li><button class="item-dropdown" id="signUp">Cadastre-se</button></li>
+      </ul>
+
+    </div>
+
+  </header>
+
+  <div id="bodyFirst">
+
+    <form id="templateSignIn" action="../php/validationLogin.php" method="post">
+
+      <h3  class="titleForm" id="titSingIn">acesse sua conta</h3>
+
+      <div id="formSignIn">
+        <div class="inputStyling" id="emailSingInContent">
+          <input type="email" name="email" class="inputSignUp" id="emailSingIn" placeholder="Digite seu email">
+        </div>
+        <div class="inputStyling" id="pwSingInContent">
+          <input type="password" name="password" class="inputSignUp" id="pwSingIn" placeholder="Digite sua senha">
+        </div>
+      </div>
+
+      <button class="buttonForms" id="buttonSubmitForm">Entrar</button>
+
+    </form>
+    
+  </div>
+
+  <div id="bodySecond">
+
+    <form action="../php/validationCreateAccount.php" method="post" class="templateSignUp">
+      
+      <h3 class="titleForm" id="titSingUp">Criar uma conta</h3>
+      
+      <div id="form">
+        <div class="inputStyling" id="myName">
+          <input type="text" name="name" class="inputSignUp" id="name" placeholder="insira seu nome" >
+        </div>
+        <div class="inputStyling" id="myLastName">
+          <input type="text" name="lastName" class="inputSignUp" id="lastName" placeholder="insira seu sobrenome">
+        </div>
+        <div class="inputStyling" id="myEmail">
+          <input type="email" name="email" class="inputSignUp" id="email" placeholder="insira seu email">
+        </div>
+        <div class="inputStyling" id="myPassword">
+          <input type="password" name="password" class="inputSignUp" id="password" placeholder="insira sua senha">
+        </div>
+        <button type="submit" class="buttonForms" id="createNewAccount">Enviar</button>
+      </div>
+      
+    </form>
+
+  </div>
+  
+  <div class="containerImg">
+    <img src="../images/baixados (1).png" alt="" id="img">
+  </div>
+ 
+  <script src="https://unpkg.com/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-ylqH3Y93PFtxHgrFxqEDD3ub+U0JeAmqWKV8Vjbb/ZIu+TFCErhUoGzAqng+wQg6" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+  <script src="../scripts/signUp.js"></script>
+  <script src="../scripts/signIn.js"></script>
+
+</body>
+
+</html>
