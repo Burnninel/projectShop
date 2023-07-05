@@ -16,7 +16,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     var_dump($email, $password);
     
     $sql = "SELECT * FROM usuario WHERE email = ? AND password = ?";
-    // $result = $conn->query($sql);
 
     $selectEmailSqlComand = $conn->prepare($sql);
     $selectEmailSqlComand->bind_param("ss", $email, $password);

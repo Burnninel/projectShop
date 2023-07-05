@@ -14,7 +14,9 @@
   <link rel="stylesheet" href="../css/account.css">
   <link rel="stylesheet" href="../css/elementsForms.css">
   <link rel="stylesheet" href="../css/modalUploadPhoto.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/infosProfile.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
   <title>Entre ou Cadastre-se</title>
 
@@ -30,9 +32,12 @@
 
     <div class="dropdown">
 
-      <div id="myProfile" class="btn dropdown-toggle dropdown-toggle-unstyled" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="svgProfile">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+      <div id="myProfile" class="btn dropdown-toggle dropdown-toggle-unstyled" type="button" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="svgProfile">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
         </svg>
       </div>
 
@@ -48,8 +53,8 @@
   <div id="bodyThird">
 
     <div id="myAccount">
-      <div id="cardProfile">
-        <div id="photoProfile">
+      <div id="profile">
+        <div class="cardImgProfile">
           <div id="myPhoto" data-bs-toggle="modal" data-bs-target="#modalForm"></div>
           <div id="myNickname"></div>
           <div id="dateCreate">
@@ -57,34 +62,109 @@
             <span id="textDate"></span>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div class="modal fade" id="modalForm" aria-labelledby="modalForm" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" id="modalDialogForm">
-        <div class="modal-content" id="modalUploadPhoto">
-          <form class="formContent" action="../php/uploadPhoto.php" method="POST" enctype="multipart/form-data">
-            <div class="custom-file-input-wrapper">
-              <input id="inputQlq" class="custom-file-input d-none" type="file" name="arquivo">
-              <label class="custom-file-name" for="inputQlq">Escolha um arquivo</label>
+        
+        <div id="infosProfile">
+          <div id="headerCardInfo">
+            <h5 id="titleHeaderCardInfo">Adcionar endereço</h5>
+            <div id="chackboxAlterCardInfo">
+              <div id="btnAlterLeft">
+                <svg class="svgInfosProfile" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /> <path stroke-linecap="round" stroke-linejoin="round"d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                </svg>
+              </div>
+              <div id="btnAlterRight">
+                <svg  class="svgInfosProfile" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" />
+                </svg>  
+              </div>
             </div>
-            <button class="buttonSubmitForm" type="submit">enviar</button>
-          </form>
+          </div>
+       
+          <form action="../php/addAddress.php" method="post" id="bodyCardInfo">
+            
+            <div id="contentComponentsCEP" id="pwSingInContent">
+              <input type="text" name="cep" maxlength="9" class="inputCardInfo" id="cep" placeholder="Digite seu CEP" required>
+              <div id="btnSearchCEP">
+                <svg id="svgSearchBtn" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                </svg>                
+              </div>
+            </div>
+
+            <div id="componentsStreet" id="pwSingInContent">
+              <input type="text" name="street" class="inputCardInfo" id="streetAddress" placeholder="rua">
+              <input type="text" name="number" class="inputCardInfo" id="numberAddress" placeholder="numero">
+            </div>
+
+            <div class="componentsAdress" id="pwSingInContent">
+              <input type="text" name="neighborhood" class="inputCardInfo" id="villageAddress" placeholder="bairro">
+            </div>
+
+            <div id="componentsStreet" id="pwSingInContent">
+              <input type="text" name="city" class="inputCardInfo" id="cityAddress" placeholder="cidade">
+              <input type="text" name="uf" class="inputCardInfo" id="ufAddress" placeholder="uf" maxlength="2">
+            </div>
+
+            <div id="componentsStreet">
+              <button id="btnSendCEP">cadastrar endereço</button>
+            </div>
+
+          </form>   
+             
         </div>
       </div>
     </div>
-    
+  </div>
+
+  <div class="modal fade" id="modalForm" aria-labelledby="modalForm" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" id="modalDialogForm">
+      <div class="modal-content" id="modalUploadPhoto">
+        <form class="formContent" action="../php/uploadPhoto.php" method="POST" enctype="multipart/form-data">
+          <div class="custom-file-input-wrapper">
+            <input id="inputQlq" class="custom-file-input d-none" type="file" name="arquivo">
+            <label class="custom-file-name" for="inputQlq">Escolha um arquivo</label>
+          </div>
+          <button class="buttonSubmitForm" type="submit">enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
   </div>
 
   <div class="containerImg">
     <img src="../images/baixados (1).png" alt="" id="img">
   </div>
- 
-  <script src="https://unpkg.com/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-ylqH3Y93PFtxHgrFxqEDD3ub+U0JeAmqWKV8Vjbb/ZIu+TFCErhUoGzAqng+wQg6" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
+
+  <script src="https://unpkg.com/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-ylqH3Y93PFtxHgrFxqEDD3ub+U0JeAmqWKV8Vjbb/ZIu+TFCErhUoGzAqng+wQg6"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
   <script src="../scripts/myAccount.js"></script>
+  <script src="../scripts/sendCEP.js"></script>
 
 </body>
 
 </html>
+
+
+
+
+<!-- <div class="buttonInfoProfile">
+  <svg class="svgInfosProfile" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+    stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+    <path stroke-linecap="round" stroke-linejoin="round"
+      d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+  </svg>
+</div>
+<div class="buttonInfoProfile">
+    <svg  class="svgInfosProfile" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" />
+  </svg>              
+</div> -->

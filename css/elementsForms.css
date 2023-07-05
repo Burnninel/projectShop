@@ -16,7 +16,7 @@
 }
 
 
-.inputSignUp {
+.inputFormStatus {
     outline: none;
     user-select: auto;
     caret-color: black;
@@ -27,16 +27,16 @@
     width: 100%;
 }
 
-.inputSignUp::placeholder { 
+.inputFormStatus::placeholder { 
     text-transform: uppercase;
 }
 
-.inputSignUpError {
+.inputFormStatusError {
     color: #ec2626;
     border-bottom: 1px #ec2626 solid;
 }
 
-.inputSignUpError::placeholder {
+.inputFormStatusError::placeholder {
     color: #ec2626;
 }
 
