@@ -18,22 +18,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo '<pre>';
     var_dump($cep, $street, $number, $neighborhood, $uf, $city);
 
-    $userId = $_SESSION["usuario"];
+    $userInvalid = false;
 
-    $sql = "SELECT id FROM usuario WHERE id = '$userId'";
-    $userExists = $conn->query($sql)->num_rows > 0;
-
-    if ($userExists) {
-        $sql = "INSERT INTO address (usuario_id, cep, street, number, neighborhood, city, uf) VALUES (?, ?, ?, ?, ?, ?, ?)";
-        $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ississs", $userId, $cep, $street, $number, $neighborhood, $city, $uf);
-        $stmt->execute();
+    if(!$cep || !$street || !$number || !$neighborhood || !$city || !$uf) {
+        $userInvalid = true;
     } else {
-        echo "Usuário inválido!";
+        $userInvalid = false;
     }
+
+    if($userInvalid = false) {
+        $userId = $_SESSION["usuario"];
+    
+        $sql = "SELECT id FROM usuario WHERE id = '$userId'";
+        $userExists = $conn->query($sql)->num_rows > 0;
+    
+        if ($userExists) {
+            $sql = "INSERT INTO address (usuario_id, cep, street, number, neighborhood, city, uf) VALUES (?, ?, ?, ?, ?, ?, ?)";
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param("ississs", $userId, $cep, $street, $number, $neighborhood, $city, $uf);
+            $stmt->execute();
+        } else {
+            echo "Usuário inválido!";
+        }
+    } else {
+        echo 'Dados invalidos!';
+    }
+
 } else {
     echo "Método de requisição inválido!";
 }
 
 $conn->close();
+
 ?>

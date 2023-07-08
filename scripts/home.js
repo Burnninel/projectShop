@@ -16,3 +16,11 @@ $('#signUp').click(function() {
 
     localStorage.setItem('form', signUp);
 });
+
+$(document).ready(function() {
+    $('.cardItemImgProminence').mouseenter(function() {
+        $(this).find('.btnCardImgProminence').addClass('btnCardImgProminenceHover').removeClass('btnCardImgProminence');
+    }).mouseleave(function() {
+        $(this).find('.btnCardImgProminenceHover').addClass('btnCardImgProminence').removeClass('btnCardImgProminenceHover');
+    });
+});
