@@ -24,7 +24,9 @@ function sucess(element) {
 }
 
 $('#createNewAccount').click(function(event) {
-    // event.preventDefault();
+    
+    event.preventDefault();
+    
     $(document).ready(function() {
         $.ajax({
             url: '../php/getDb.php',
@@ -95,6 +97,7 @@ function verifyCredentials(data) {
 
     if (!email || !email.match(emailRegex)) {
         errorCredentials(errorEmail, '#myEmail', '#email');
+        console.log('sdfjk')
         invalidUser = true;
     };
 

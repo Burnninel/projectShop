@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="../css/home.css">
   <link rel="stylesheet" href="../css/responsiveProminence.css">
   <link rel="stylesheet" href="../css/bannerHome.css">
+  <link rel="stylesheet" href="../css/carousel.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
   <title>Home</title>
@@ -42,13 +43,32 @@
     </header>
 
     <div class="containerBody">
+     
       <div id="containerImgShopAll">
         <img src="../images/image.png" id="imgShopAll" alt="imgShopAll">
       </div>
       <div id="containerProminenceItens"></div>
       <div id="containerBannerSnow"></div>
-    </div>
+      <h4 id="titleCarousel">novidades</h4>
 
+      <div id="carouselShop" class="container text-center">
+        <div class="prev btnCarousel" id="btnReturn" type="" data-bs-target="#myCarousel" data-bs-slide="prev">
+          <svg class="svgCarousel" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+          </svg>          
+        </div>
+   
+        <div class="carousel slide" id="myCarousel">
+         
+        </div>
+
+        <div class="next btnCarousel" id="btnReturnNext" type="" data-bs-target="#myCarousel" data-bs-slide="next">
+          <svg class="svgCarousel" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+          </svg>          
+        </div>
+      </div>    
+        
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
@@ -56,6 +76,7 @@
   <script src="../scripts/home/containerBodyHome.js"></script>
   <script src="../scripts/home/home.js"></script>
   <script src="../scripts/home/banner.js"></script>
+  <script src="../scripts/home/carousel.js"></script>
   <script src="../scripts/signIn.js"></script>
   <script src="../scripts/signUp.js"></script>
 
