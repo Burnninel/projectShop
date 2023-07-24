@@ -22,14 +22,13 @@
     border-radius: 12px;
 }
 
-#profile {
+#profileBody {
     display: flex;
     flex-direction: row;
     align-items: center;
     border: 1px #cfcbcb solid;
     border-radius: 12px;
     width: 100%;
-    height: 230px;
     padding: 15px;
 }
 

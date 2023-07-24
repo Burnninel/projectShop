@@ -5,7 +5,7 @@ function card(id, productName, productImg, productValue, component) {
                   <div class="card cardItemShop" id="${id}">
                     <div class="itemShop">
                       <img src="../images/${productImg}.png" alt="imgCardShop" class="imgItem" >
-                      <div class="formCardItemShop">
+                      <div class="formAddressItemShop">
                         <h5 class="title">${productName}</h5>
                         <span class="productValue">R$${productValue}</span>
                         <span class="parcelProductValue">10x de R$${parcelValue} sem juros</span>
