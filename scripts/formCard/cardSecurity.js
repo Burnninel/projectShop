@@ -29,8 +29,8 @@ function generateItemDropdownYear() {
     };
 };
 
-function btnDropdown(name, id, element) {
-    const btnMonth = `<button class="selectCard" id="${id}" type="button" data-bs-toggle="dropdown" aria-expanded="false">${name}</button>`;
+function btnDropdown(id, name, text, element) {
+    const btnMonth = `<input type="text" class="selectCard" id="${id}" data-bs-toggle="dropdown" aria-expanded="false" name="${name}" placeholder="${text}">`;
     $(`#${element}`).append(btnMonth);
 };
 
@@ -40,16 +40,16 @@ function listItemDropdown(id, element) {
 };
 
 function cvvCard() {
-    const cvvCard = `<input type="number" name="cvvCard" class="selectCard" id="cvvCard" placeholder="cvv" maxlength="3">`;
+    const cvvCard = `<input type="number" name="cvv" class="selectCard" id="cvvCard" placeholder="cvv" maxlength="3">`;
     $(`#cardSecurity`).append(cvvCard);
 };
 
 function dropdownValidityMounth() {
-    btnDropdown('mês', 'btnMonth', 'monthValidityCard');
+    btnDropdown('btnMonth', 'month', 'mês', 'monthValidityCard');
     listItemDropdown('listItemMonth', 'monthValidityCard');
     generateItemDropdownMonth();
 
-    btnDropdown('ano', 'btnYear', 'yearValidityCard');
+    btnDropdown('btnYear', 'year', 'ano', 'yearValidityCard');
     listItemDropdown('listItemYear', 'yearValidityCard');
     generateItemDropdownYear();
     
@@ -60,10 +60,10 @@ dropdownValidityMounth();
 
 $('.itemMonth').click(function() {
         const nameSelect = $(this).text();
-        $('#btnMonth').text(nameSelect);
+        $('#btnMonth').val(nameSelect);
 });
 
 $('.itemYear').click(function() {
     const nameSelect = $(this).text();
-    $('#btnYear').text(nameSelect);
+    $('#btnYear').val(nameSelect);
 });

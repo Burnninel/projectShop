@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $userInvalid = false;
     }
 
-    if($userInvalid = false) {
+    if(!$userInvalid) {
         $userId = $_SESSION["usuario"];
     
         $sql = "SELECT id FROM usuario WHERE id = '$userId'";
