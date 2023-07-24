@@ -4,7 +4,7 @@
     height: 100%;
 }
 
-#headerCardInfo {
+#headerAlterAddressCard {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -19,7 +19,7 @@
     border-radius: 4px;
 }
 
-#titleHeaderCardInfo {
+#titleHeaderAddressCard {
     display: flex;
     align-items: center;
     justify-content: center;
