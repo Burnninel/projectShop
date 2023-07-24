@@ -15,6 +15,8 @@ $(document).ready(function() {
 $('#btnSearchCEP').click(function() {
     var cep = $('#cep').val()
 
+    console.log('ola')
+
     $.ajax({
         url: `https://viacep.com.br/ws/${cep}/json/`,
         type: 'GET',

@@ -1,3 +1,4 @@
+
 #infosProfile {
     width: 100%;
     height: 100%;
@@ -11,6 +12,13 @@
     width: 100%;
 }
 
+#chackboxAlterCardInfo {
+    display: flex;
+    flex-direction: row;
+    border: 1px #cfcbcb solid;
+    border-radius: 4px;
+}
+
 #titleHeaderCardInfo {
     display: flex;
     align-items: center;
@@ -22,6 +30,24 @@
     height: 100%;
 }
 
+#btnAlterLeft {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    background-color: #000000;
+    border-radius: 3px;
+    color: white;
+
+}
+
+#btnAlterRight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+}
+
 .svgInfosProfile {
     height: 18px;
     width: 18px;
@@ -29,14 +55,13 @@
 
 #formAddress {
     width: 100%;
-    padding: 22px 12px 0px 6px;
+    padding: 22px 2px 0px 14px;
 }
 
 .inputBodyInfo {
     outline: none;
     user-select: auto;
     caret-color: black;
-    text-transform: none;
     border: none;
     border-bottom: 1px #cfcbcb solid;
     font-size: 12px;
@@ -59,18 +84,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
     height: 24px;
     width: 35px;
     margin-left: 12px;
     border-radius: 6px;
     border: 1px #cfcbcb solid;
     background-color: #fff;
-}
-
-.inputsAddress {
-    display: flex;
-    margin-bottom: 0;
 }
 
 #btnSearchCEP:hover {
@@ -83,7 +102,7 @@
     width: 16px;
 }
 
-.multipleInputRowForm {
+#componentsStreet {
     display: flex;
     flex-direction: row;
 }
@@ -106,11 +125,11 @@
     width: 30%;
 }
 
-.btnFormAccount {
+#btnSendCEP {
     text-align: center;
-    text-transform: uppercase;
     background-color: #000000;
     color: #fff;
+    text-transform: uppercase;
     font-size: 12px;
     font-weight: 500;
     border: none;
@@ -119,7 +138,7 @@
     height: 25px;
 }
 
-.btnFormAccount:hover {
+#btnSendCEP:hover {
     background-color: #fff;
     color: #000000;
     border: 1px #cfcbcb solid;
