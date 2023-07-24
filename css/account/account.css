@@ -4,6 +4,7 @@
     justify-content: center;
     user-select: none;
     caret-color: transparent;
+    height: 100vh;
 }
 
 .cardImgProfile {
@@ -17,7 +18,7 @@
 #myAccount {
     width: 480px;
     padding: 20px;
-    margin-top: 110px;
+    /* margin-top: 110px; */
     border: 1px #cfcbcb solid;
     border-radius: 12px;
 }

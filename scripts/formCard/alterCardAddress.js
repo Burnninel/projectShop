@@ -1,6 +1,5 @@
 $(document).ready(function() {
     $('#btnAlterLeft').addClass('itemActive');
-    console.log('map');
 
     $('#chackboxAlterCardInfo').click(function() {
        
@@ -12,9 +11,11 @@ $(document).ready(function() {
             $('#btnAlterRight').addClass('checkboxOff');
 
             $('#btnAlterLeft').addClass('itemActive');
+
             $('#formCard').hide();
             $('#formAddress').show();
-            console.log('map');
+
+            $('#titleHeaderAddressCard').text('Adicionar endereço');
         } else {
             $('#btnAlterRight').addClass('itemActive');
             $('#btnAlterLeft').removeClass('itemActive');
@@ -22,10 +23,11 @@ $(document).ready(function() {
             $('#btnAlterLeft').removeClass('checkboxOn');
             $('#btnAlterRight').addClass('checkboxOn');
             $('#btnAlterLeft').addClass('checkboxOff');            
-
+            
             $('#formAddress').hide();
             $('#formCard').show();
-            console.log('card');
+
+            $('#titleHeaderAddressCard').text('Adicionar cartão');
         };
 
     });
