@@ -1,5 +1,5 @@
 function dropdownValidity(id) {
-    const dropdown = `<div class="dropdown-center" id="${id}"></div>`;
+    const dropdown = `<div class="" id="${id}"></div>`;
     $('#cardSecurity').append(dropdown);
 };
 
@@ -30,7 +30,7 @@ function generateItemDropdownYear() {
 };
 
 function btnDropdown(id, name, text, element) {
-    const btnMonth = `<input type="text" class="selectCard" id="${id}" data-bs-toggle="dropdown" aria-expanded="false" name="${name}" placeholder="${text}">`;
+    const btnMonth = `<input type="number" class="inputBodyInfo" id="${id}" data-bs-toggle="dropdown" aria-expanded="false" name="${name}" placeholder="${text}">`;
     $(`#${element}`).append(btnMonth);
 };
 
@@ -40,7 +40,7 @@ function listItemDropdown(id, element) {
 };
 
 function cvvCard() {
-    const cvvCard = `<input type="number" name="cvv" class="selectCard" id="cvvCard" placeholder="cvv" maxlength="3">`;
+    const cvvCard = `<input type="number" name="cvv" class="inputBodyInfo" id="cvvCard" placeholder="cvv" maxlength="3">`;
     $(`#cardSecurity`).append(cvvCard);
 };
 
@@ -57,6 +57,7 @@ function dropdownValidityMounth() {
 };
 
 dropdownValidityMounth();
+
 
 $('.itemMonth').click(function() {
         const nameSelect = $(this).text();

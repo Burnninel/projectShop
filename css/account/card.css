@@ -4,27 +4,15 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 20px 12px 0px 6px;
+    padding: 22px 12px 0px 6px;
 }
 
-.multipleInputRowForm { width: 100%; margin-bottom: 10px; }
+.multipleInputRowForm { width: 100% }
 
-#inputNumberCard { width: 100%; }
-
-.selectCard {
-    text-align: left;
-    outline: none;
-    user-select: auto;
-    caret-color: black;
-    appearance: none;
-    border: none;
-    text-transform: uppercase;
-    background-color: #fff;
-    color: #787777;
+#inputNumberCard { 
+    display: flex;
+    position: relative;
     width: 100%;
-    padding: 0;
-    font-size: 12px;
-    border-bottom: 1px #cfcbcb solid;
 }
 
 .listValidityCard {
@@ -49,7 +37,6 @@
 #yearValidityCard { width: 40%; }
 
 #yearValidityCard .dropdown-menu { min-width: 86px; }
-
 
 #cvvCard { width: 30%; margin-left: 5%; }
 
@@ -78,10 +65,6 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
-
-#inputNumberCard {
-    position: relative;
 }
 
 .flagCard {

@@ -65,8 +65,7 @@
 }
 
 .inputsAddress {
-    display: flex;
-    margin-bottom: 0;
+    /* display: flex; */
 }
 
 #btnSearchCEP:hover {
