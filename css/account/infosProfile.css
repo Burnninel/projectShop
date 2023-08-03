@@ -40,6 +40,14 @@
     width: 100%;
 }
 
+.inputBodyInfoError {
+    border-bottom: 1px #ec2626d2 solid;
+}
+
+.inputBodyInfoError::placeholder {
+    color:#ec2626d2;
+}
+
 .inputBodyInfo::placeholder { 
     text-transform: uppercase;
     font-size: 12px;

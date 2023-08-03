@@ -43,7 +43,6 @@ $(document).ready(function () {
         success: function (data) {
             idUserLogin = data.idUsuario;
             searchImageProfile(idUserLogin);
-            console.log(idUserLogin);
         },
         error: function (xhr, status, error) {
             if (xhr.responseText) {

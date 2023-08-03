@@ -13,7 +13,6 @@ function elementSearchCep(type, name, id, placeholder, maxlength) {
     $('#formAddress').append(elementSearchCep);
 };
 
-
 elementSearchCep('text', 'cep', 'cep', 'Digite seu CEP', '9');
 
 function elementsDoubleInputRow(element) {
@@ -27,12 +26,12 @@ function doubleInputRow(type, name, id, placeholder,element, maxlength) {
 };
 
 function singleInputRow(type, name, id, placeholder, maxlength) {
-    const singleInputRow = `<div class="inputsAddress"> <input type="${type}" name="${name}" class="inputBodyInfo" id="${id}" placeholder="${placeholder}" maxlength="${maxlength}"> </div>`
+    const singleInputRow = `<div class="inputsAddress"> <input type="${type}" name="${name}" class="inputBodyInfo" id="${id}" placeholder="${placeholder}" maxlength="${maxlength}"> </div>`;
     $('#formAddress').append(singleInputRow);
-}
+};
 
 function btnAddAddress() {
-    const btnAddAddress = `<div class="inputsAddress"> <button id="btnSendCEP" class="btnFormAccount">adicionar endereço</button> </div>`;
+    const btnAddAddress = `<div class="inputsAddress"> <button id="btnSendCEP" class="btnFormAccount" type="submit">adicionar endereço</button> </div>`;
     $('#formAddress').append(btnAddAddress);
 };
 
@@ -41,7 +40,7 @@ elementsDoubleInputRow('streetAndNumber');
 doubleInputRow('text', 'street', 'streetAddress', 'rua', 'streetAndNumber');
 doubleInputRow('text', 'number', 'numberAddress', 'numero', 'streetAndNumber');
 
-singleInputRow('text', 'neighborhood', 'villageAddress', 'bairro', '24')
+singleInputRow('text', 'neighborhood', 'villageAddress', 'bairro', '24');
 
 elementsDoubleInputRow('cityAndUf');
 
