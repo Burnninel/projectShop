@@ -1,30 +1,12 @@
 var addressInvalid = false;
 
-function validationForm(id) {
-    if (!id) {
-        return true;
-    };
-
-    return false;
-};
-
-function addStatusInputsForm(element) {
-    var inputError = $('#' + element).val();
-    
-    if (addressInvalid && validationForm(inputError)) {
-        $('#' + element).addClass('inputBodyInfoError');
-    } else {
-        $('#' + element).removeClass('inputBodyInfoError');
-    };
-};
-
 function inputsForm() {
-    addStatusInputsForm('cep');
-    addStatusInputsForm('streetAddress');
-    addStatusInputsForm('numberAddress');
-    addStatusInputsForm('villageAddress');
-    addStatusInputsForm('cityAddress');
-    addStatusInputsForm('ufAddress');
+    addStatusInputsForm('cep', 'myName');
+    addStatusInputsForm('streetAddress', 'myName');
+    addStatusInputsForm('numberAddress', 'myName');
+    addStatusInputsForm('villageAddress', 'myName');
+    addStatusInputsForm('cityAddress', 'myName');
+    addStatusInputsForm('ufAddress', 'myName');
 };
 
 function valuesForm() {
@@ -49,7 +31,7 @@ $('#cep, #streetAddress, #numberAddress, #villageAddress, #cityAddress, #ufAddre
     if (validationForm($(this).val())) {
         addStatusInputsForm(inputIdSelected);
     } else {
-        $(`#${inputIdSelected}`).removeClass('inputBodyInfoError');
+        $(`#${inputIdSelected}`).removeClass('inputFormStatusError');
     };
 });
 

@@ -40,11 +40,11 @@
     width: 100%;
 }
 
-.inputBodyInfoError {
+.inputFormStatusError {
     border-bottom: 1px #ec2626d2 solid;
 }
 
-.inputBodyInfoError::placeholder {
+.inputFormStatusError::placeholder {
     color:#ec2626d2;
 }
 

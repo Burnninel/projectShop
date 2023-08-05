@@ -1,12 +1,3 @@
-$(document).ready(function() {
-    var typeFormLS = localStorage.getItem('form')
-    
-    if (typeFormLS == 'signIn') {
-        $('#bodyFirst').css('display', 'flex');
-        $('#bodySecond').hide();
-    }
-
-});
 
 function sucess(element) {
     $('#emailSingIn').val('');
@@ -69,14 +60,4 @@ $('#buttonSubmitForm').click(function() {
         
     });
 
-});
-
-$(document).on('click', '#signIn', function() {
-    var signUp = 'signIn';
-    localStorage.setItem('form', signUp);
-    
-    $('#emailSingIn').removeClass('inputSucess');
-    $('#pwSingIn').removeClass('inputSucess');
-    $('#bodyFirst').css('display', 'flex');
-    $('#bodySecond').hide();
 });
