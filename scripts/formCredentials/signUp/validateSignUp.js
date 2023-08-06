@@ -1,9 +1,9 @@
 var addressInvalid = false;
 
 function inputsForm() {
-    addStatusInputsForm('name', 'myName');
-    addStatusInputsForm('lastName', 'myLastName');
-    addStatusInputsForm('password', 'myPassword');
+    addStatusInputsForm('name', 'myName', 'Digite um nome valido');
+    addStatusInputsForm('lastName', 'myLastName', 'Digite um sobrenome valido');
+    addStatusInputsForm('password', 'myPassword', 'Digite uma senha valida');
 };
 
 function valuesForm() {
@@ -64,7 +64,7 @@ function validationEmail() {
         ('#myEmail .svgError').remove();
         $('.templateSignUp').submit();
     } else {
-        errorSvg('myEmail');
+        errorSvg('myEmail', 'Email invalido');
         $('#email').removeClass('inputSucess');
         $('#email').addClass('inputFormStatusError');
     };

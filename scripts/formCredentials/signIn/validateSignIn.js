@@ -52,11 +52,11 @@ function validationEmail() {
         
         $('.templateSignIn').submit();
     } else {
-        errorSvg('emailSingInContent');
+        errorSvg('emailSingInContent', 'Email ou senha invalidos');
         $('#emailSingIn').removeClass('inputSucess');
         $('#emailSingIn').addClass('inputFormStatusError');
 
-        errorSvg('pwSingInContent');
+        errorSvg('pwSingInContent', 'Email ou senha invalidos');
         $('#pwSingIn').removeClass('inputSucess');
         $('#pwSingIn').addClass('inputFormStatusError');
     };
