@@ -73,7 +73,8 @@
 }
 
 .inputsAddress {
-    /* display: flex; */
+    display: flex;
+    width: 100%;
 }
 
 #btnSearchCEP:hover {
@@ -91,21 +92,25 @@
     flex-direction: row;
 }
 
-#streetAddress {
+#svgStreet {
     width: 65%;
     margin-right: 5%;
 }
 
-#numberAddress {
+#streetAddress {
+    width: 100%;
+}
+
+#svgNumber {
     width: 30%;
 }
 
-#cityAddress {
+#svgCity {
     width: 65% ;
     margin-right: 5%;
 }
 
-#ufAddress {
+#svgUf {
     width: 30%;
 }
 

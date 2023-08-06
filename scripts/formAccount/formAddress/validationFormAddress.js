@@ -1,12 +1,12 @@
 var addressInvalid = false;
 
 function inputsForm() {
-    addStatusInputsForm('cep', 'myName');
-    addStatusInputsForm('streetAddress', 'myName');
-    addStatusInputsForm('numberAddress', 'myName');
-    addStatusInputsForm('villageAddress', 'myName');
-    addStatusInputsForm('cityAddress', 'myName');
-    addStatusInputsForm('ufAddress', 'myName');
+    addStatusInputsForm('cep', 'svgCep', 'digite um cep valido');
+    addStatusInputsForm('streetAddress', 'svgStreet', 'Rua invalida');
+    addStatusInputsForm('numberAddress', 'svgNumber', 'Numero invalido');
+    addStatusInputsForm('villageAddress', 'svgNeighborhood', 'Bairro invalido');
+    addStatusInputsForm('cityAddress', 'svgCity', 'Cidade invalida');
+    addStatusInputsForm('ufAddress', 'svgUf', 'Uf invalida');
 };
 
 function valuesForm() {
@@ -27,11 +27,19 @@ function valuesForm() {
 
 $('#cep, #streetAddress, #numberAddress, #villageAddress, #cityAddress, #ufAddress').on('keyup', function() {
     var inputIdSelected = $(this).attr('id');
+    var idParent = $(this).parent().attr('id');
+
+    if ($(this).val().trim() !== '') {
+        $('#' + idParent + ' .svgError').hide();
+    } else {
+        $('#' + idParent + ' .svgError').show();
+    }
 
     if (validationForm($(this).val())) {
-        addStatusInputsForm(inputIdSelected);
+        addStatusInputsForm(inputIdSelected, idParent, 'digite um cep valido');
     } else {
         $(`#${inputIdSelected}`).removeClass('inputFormStatusError');
+        $('#' + idParent + ' .svgError').hide();
     };
 });
 
