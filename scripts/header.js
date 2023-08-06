@@ -41,3 +41,15 @@ function itemDropdown(id, title) {
 
 itemDropdown('signIn', 'Entrar');
 itemDropdown('signUp', 'Cadastre-se');
+
+$(document).on('click', '#signIn', function() {
+
+    window.location.href = 'http://localhost/trab/pages/signIn.html';
+    
+});
+
+$(document).on('click', '#signUp', function() {
+   
+    window.location.href = 'http://localhost/trab/pages/signUp.html';
+    
+});
