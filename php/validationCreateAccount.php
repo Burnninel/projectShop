@@ -45,7 +45,7 @@
 
             if ($stmt->execute() === TRUE) {
                 echo "Dados enviados com sucesso.";
-                header("Location: ../pages/form.html"); 
+                header("Location: ../pages/signIn.html"); 
 
             } else {
                 echo "Erro ao enviar os dados: " . $conn->error;
