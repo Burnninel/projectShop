@@ -1,5 +1,5 @@
 #bodySecond {
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     user-select: none;
@@ -18,8 +18,6 @@
     border: 1px #cfcbcb solid;
     border-radius: 12px;
 }
-
-
 
 #form {
     display: flex;

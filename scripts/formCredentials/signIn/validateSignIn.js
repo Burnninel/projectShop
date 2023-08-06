@@ -1,4 +1,3 @@
-
 function sucess(element) {
     $('#emailSingIn').val('');
     $('#pwSingIn').val('');
@@ -7,7 +6,7 @@ function sucess(element) {
 }
 
 function errorCredentials(event, erroMsg, element, style) {
-    event.preventDefault();
+    // event.preventDefault();
    
     var error = `
         <svg xmlns="http://www.w3.org/2000/svg" class="svgError" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="${erroMsg}">
@@ -35,13 +34,14 @@ $('#buttonSubmitForm').click(function() {
                 var errorName = 'Email ou senha invalidos!';
 
                 for (db of data) {
+
                     if(db.email !== email || db.password !== pw) {
                         errorCredentials(errorName, '#emailSingInContent', '#emailSingIn');
                         errorCredentials(errorName, '#pwSingInContent', '#pwSingIn');
                     } else {
                         sucess('#emailSingIn');
                         sucess('#pwSingIn');
-                        $('#bodyFirst').hide();
+                        window.location.href = 'http://localhost/trab/pages/myAccount.html';
                         
                         break;
                     }

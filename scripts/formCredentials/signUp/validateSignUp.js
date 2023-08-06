@@ -11,9 +11,13 @@ function valuesForm() {
     var lastName = $('#lastName').val();
     var password = $('#password').val();
 
+    console.log(name)
+
     addressInvalid = validationForm(name) ||
                      validationForm(lastName) ||
                      validationForm(password);
+
+
 };
 
 var emailInvalid = false;
@@ -75,7 +79,7 @@ $('.templateSignUp').submit(function(event) {
 
 $('#createNewAccount').click(function(event) {
     valuesForm();
-    validationEmail()
+    validationEmail();
 
     event.preventDefault();
 
