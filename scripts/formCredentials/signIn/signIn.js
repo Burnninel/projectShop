@@ -1,18 +1,10 @@
-
-
 form('templateSignIn', '../php/validationLogin', 'post', 'bodyFirst', 'templateSignIn')
 
-
-titleSignIn('titleSingIn', 'Acesse sua conta', 'templateSignIn')
-
-
+titleForm('titleSingIn', 'Acesse sua conta', 'templateSignIn')
 
 formBody('formSignIn', 'templateSignIn');
 
+btnForm('buttonSubmitForm', 'Entrar', 'templateSignIn');
 
-
-btnSignIn('buttonSubmitForm', 'Entrar', 'templateSignIn');
-
-
-inputSignIn('emailSingInContent', 'email', 'email', 'emailSingIn', 'Digite seu email', 'formSignIn');
-inputSignIn('pwSingInContent', 'password', 'password', 'pwSingIn', 'Digite sua senha', 'formSignIn');
+inputsForms('emailSingInContent', 'email', 'email', 'emailSingIn', 'Digite seu email', 'formSignIn');
+inputsForms('pwSingInContent', 'password', 'password', 'pwSingIn', 'Digite sua senha', 'formSignIn');

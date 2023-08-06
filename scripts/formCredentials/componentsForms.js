@@ -4,7 +4,7 @@ function form(id, action, method, body, className) {
     $('#' + body).append(form);
 }
 
-function titleSignIn(id, title, template) {
+function titleForm(id, title, template) {
     var title = `<h3 id="${id}" class="titleForm">${title}</h3>`
 
     $('#' + template).append(title)
@@ -17,13 +17,13 @@ function formBody(id, template) {
     $('#' + template).append(form)
 }
 
-function btnSignIn(id, title, element) {
+function btnForm(id, title, element) {
     var btn = `<button type="submit" class="buttonForms" id="${id}">${title}</button>`;
 
     $('#' + element).append(btn);
 }
 
-function inputSignIn(idComponent, type, name, id, placeholder, element) {
+function inputsForms(idComponent, type, name, id, placeholder, element) {
     var input = `
         <div class="inputStyling" id="${idComponent}">
             <input type="${type}" name="${name}" class="inputFormStatus" id="${id}" placeholder="${placeholder}">
