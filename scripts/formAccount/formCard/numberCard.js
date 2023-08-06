@@ -1,13 +1,13 @@
-function numberCard() {
+function numberCard(idElement) {
     var numberCard = 
                     `
-                        <input type="text" name="numberCard" class="inputBodyInfo" id="numberCard" placeholder="número do cartão" maxlength="19">
+                        <div class="inputStyling" id="${idElement}"> <input type="text" name="numberCard" class="inputBodyInfo" id="numberCard" placeholder="número do cartão" maxlength="19"></div>
                     `;
 
     $('#inputNumberCard').append(numberCard);
 };
 
-numberCard();
+numberCard('numberElement');
 
 function flagCard(decimal, idSvg, svg, code1, code2) {
     var myInput = $("#numberCard");

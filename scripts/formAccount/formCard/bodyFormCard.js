@@ -12,16 +12,16 @@ function inputSecurity() {
 
 inputSecurity();
 
-function nameCard() {
-    var numberCard = 
+function nameCard(idElement) {
+    var nameCard = 
                     `
-                        <input type="text" name="numberCard" class="inputBodyInfo" id="nameCard" placeholder="nome do titular" maxlength="19">
+                        <div class="inputStyling" id="${idElement}"> <input type="text" name="nameCard" class="inputBodyInfo" id="nameCard" placeholder="nome do titular" maxlength="19"></div>
                     `;
 
-    $('#formCard').append(numberCard);
+    $('#formCard').append(nameCard);
 };
 
-nameCard();
+nameCard('nameElement');
 
 function cardInfo() {
     const cardInfo = `<div class="multipleInputRowForm" id="cardInfo"></div>`;

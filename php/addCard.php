@@ -14,6 +14,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $month = isset($_POST["month"]) ? $_POST["month"] : "";
     $year = isset($_POST["year"]) ? $_POST["year"] : "";
     $cvv = isset($_POST["cvv"]) ? $_POST["cvv"] : "";
+    
+    $name = isset($_POST["nameCard"]) ? $_POST["nameCard"] : "";
 
     $cpfRegex = isset($_POST["cpf"]) ? $_POST["cpf"] : "";
     $cpf = str_replace(['.', '-'], '', $cpfRegex);
@@ -21,11 +23,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nick = isset($_POST["nick"]) ? $_POST["nick"] : "";
 
     echo '<pre>';
-    var_dump($numberCard, $month, $year, $cvv, $cpf, $nick);
+    var_dump($numberCard, $month, $year, $cvv, $name, $cpf, $nick);
 
     $userInvalid = false;
     
-    if(!$numberCard || !$month || !$year || !$cvv || !$cpf) {
+    if(!$numberCard || !$month || !$year || !$cvv ||!$name || !$cpf) {
         $userInvalid = true;
         return true;
     } else {
@@ -41,9 +43,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         var_dump($userExists);
 
         if ($userExists) {
-            $sql = "INSERT INTO card (usuario_id, numberCard, monthValidity, yearValidity, cvv, cpf, nick) VALUES (?, ?, ?, ?, ?, ?, ?)";
+            $sql = "INSERT INTO card (usuario_id, numberCard, monthValidity, yearValidity, cvv, name, cpf, nick) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
             $stmt = $conn->prepare($sql);
-            $stmt->bind_param("issssss", $userId, $numberCard, $month, $year, $cvv, $cpf, $nick);
+            $stmt->bind_param("isssssss", $userId, $numberCard, $month, $year, $cvv, $name, $cpf, $nick);
             $stmt->execute();
             echo "deu boa!";
         } else {

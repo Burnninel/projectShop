@@ -39,7 +39,7 @@ $('#cep, #streetAddress, #numberAddress, #villageAddress, #cityAddress, #ufAddre
         addStatusInputsForm(inputIdSelected, idParent, 'digite um cep valido');
     } else {
         $(`#${inputIdSelected}`).removeClass('inputFormStatusError');
-        $('#' + idParent + ' .svgError').hide();
+        // $('#' + idParent + ' .svgError').hide();
     };
 });
 

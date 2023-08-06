@@ -38,11 +38,11 @@
 
 #yearValidityCard .dropdown-menu { min-width: 86px; }
 
-#cvvCard { width: 30%; margin-left: 5%; }
+#cvvElement { width: 30%; margin-left: 5%; }
 
-#elementCpfCard { width: 47%; margin-right: 6%; }
+#elementCpf { width: 47%; margin-right: 6%; }
 
-#elementNickCard { width: 47%; }
+#elementNick { width: 47%; }
 
 .itemDropdown {
     display: flex;

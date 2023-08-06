@@ -29,8 +29,8 @@ function generateItemDropdownYear() {
     };
 };
 
-function btnDropdown(id, name, text, element) {
-    const btnMonth = `<input type="number" class="inputBodyInfo" id="${id}" data-bs-toggle="dropdown" aria-expanded="false" name="${name}" placeholder="${text}">`;
+function btnDropdown(idElement, id, name, text, element) {
+    const btnMonth = `<div class="inputStyling" id="${idElement}"> <input type="number" class="inputBodyInfo" id="${id}" data-bs-toggle="dropdown" aria-expanded="false" name="${name}" placeholder="${text}"> </div>`;
     $(`#${element}`).append(btnMonth);
 };
 
@@ -39,21 +39,21 @@ function listItemDropdown(id, element) {
     $(`#${element}`).append(listItemDropdown);
 };
 
-function cvvCard() {
-    const cvvCard = `<input type="number" name="cvv" class="inputBodyInfo" id="cvvCard" placeholder="cvv" maxlength="3">`;
-    $(`#cardSecurity`).append(cvvCard);
+function cvvElement(idElement, type, name, idInput, placeholder, maxlength) {
+    const cvvElement = `<div class="inputStyling" id="${idElement}"> <input type="${type}" name="${name}" id="${idInput}" class="inputBodyInfo" placeholder="${placeholder}" maxlength="${maxlength}"> </div>`;
+    $(`#cardSecurity`).append(cvvElement);
 };
 
 function dropdownValidityMounth() {
-    btnDropdown('btnMonth', 'month', 'mês', 'monthValidityCard');
+    btnDropdown('monthElement', 'btnMonth', 'month', 'mês', 'monthValidityCard');
     listItemDropdown('listItemMonth', 'monthValidityCard');
     generateItemDropdownMonth();
 
-    btnDropdown('btnYear', 'year', 'ano', 'yearValidityCard');
+    btnDropdown('yearElement', 'btnYear', 'year', 'ano', 'yearValidityCard');
     listItemDropdown('listItemYear', 'yearValidityCard');
     generateItemDropdownYear();
     
-    cvvCard();
+    cvvElement('cvvElement', 'number', 'cvv', 'cvvCard', 'cvv', '3');
 };
 
 dropdownValidityMounth();
