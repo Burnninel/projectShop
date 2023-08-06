@@ -62,7 +62,7 @@ function validationEmail() {
         $('#email').addClass('inputSucess');
         $(' .svgError').remove();
         ('#myEmail .svgError').remove();
-        $('.templateSignUp').submit();
+        $('#templateSignUp').submit();
     } else {
         errorSvg('myEmail', 'Email invalido');
         $('#email').removeClass('inputSucess');
@@ -70,7 +70,7 @@ function validationEmail() {
     };
 };
 
-$('.templateSignUp').submit(function(event) {
+$('#templateSignUp').submit(function(event) {
     if (addressInvalid || emailInvalid) {
         event.preventDefault();
         return false;

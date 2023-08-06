@@ -6,7 +6,7 @@
     caret-color: transparent;
 }
 
-.templateSignUp {
+#templateSignUp {
     display: flex;
     flex-direction: column;
     justify-content: center;
