@@ -1,12 +1,12 @@
 var addressInvalid = false;
 
 function inputsForm() {
-    addStatusInputsForm('cep', 'svgCep', 'digite um cep valido');
-    addStatusInputsForm('streetAddress', 'svgStreet', 'Rua invalida');
-    addStatusInputsForm('numberAddress', 'svgNumber', 'Numero invalido');
-    addStatusInputsForm('villageAddress', 'svgNeighborhood', 'Bairro invalido');
-    addStatusInputsForm('cityAddress', 'svgCity', 'Cidade invalida');
-    addStatusInputsForm('ufAddress', 'svgUf', 'Uf invalida');
+    addStatusInputsForm(addressInvalid, 'cep', 'svgCep', 'digite um cep valido');
+    addStatusInputsForm(addressInvalid, 'streetAddress', 'svgStreet', 'Rua invalida');
+    addStatusInputsForm(addressInvalid, 'numberAddress', 'svgNumber', 'Numero invalido');
+    addStatusInputsForm(addressInvalid, 'villageAddress', 'svgNeighborhood', 'Bairro invalido');
+    addStatusInputsForm(addressInvalid, 'cityAddress', 'svgCity', 'Cidade invalida');
+    addStatusInputsForm(addressInvalid, 'ufAddress', 'svgUf', 'Uf invalida');
 };
 
 function valuesForm() {
@@ -52,6 +52,8 @@ $('#formAddress').submit(function(event) {
 
 $('#btnSendCEP').click(function(event) {
     valuesForm();
+
+    console.log(addressInvalid)
 
     event.preventDefault();
 

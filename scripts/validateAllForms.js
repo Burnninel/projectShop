@@ -26,10 +26,10 @@ function validationForm(id) {
     return false;
 };
 
-function addStatusInputsForm(input, element, tooltip) {
+function addStatusInputsForm(validate, input, element, tooltip) {
     var inputError = $('#' + input).val();
     
-    if (addressInvalid && validationForm(inputError)) {
+    if (validate && validationForm(inputError)) {
         $('#' + input).addClass('inputFormStatusError');
         errorSvg(element, tooltip);
     } else {

@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $year = isset($_POST["year"]) ? $_POST["year"] : "";
     $cvv = isset($_POST["cvv"]) ? $_POST["cvv"] : "";
     
-    $name = isset($_POST["nameCard"]) ? $_POST["nameCard"] : "";
+    $name= isset($_POST["nameCard"]) ? $_POST["nameCard"] : "";
 
     $cpfRegex = isset($_POST["cpf"]) ? $_POST["cpf"] : "";
     $cpf = str_replace(['.', '-'], '', $cpfRegex);
@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $userInvalid = false;
     
-    if(!$numberCard || !$month || !$year || !$cvv ||!$name || !$cpf) {
+    if(!$numberCard || !$month || !$year || !$cvv || !$name || !$cpf) {
         $userInvalid = true;
         return true;
     } else {
