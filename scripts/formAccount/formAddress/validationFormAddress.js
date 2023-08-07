@@ -31,15 +31,10 @@ $('#cep, #streetAddress, #numberAddress, #villageAddress, #cityAddress, #ufAddre
 
     if ($(this).val().trim() !== '') {
         $('#' + idParent + ' .svgError').hide();
+        $(`#${inputIdSelected}`).removeClass('inputFormStatusError');
     } else {
         $('#' + idParent + ' .svgError').show();
-    }
-
-    if (validationForm($(this).val())) {
-        addStatusInputsForm(inputIdSelected, idParent, 'digite um cep valido');
-    } else {
-        $(`#${inputIdSelected}`).removeClass('inputFormStatusError');
-        // $('#' + idParent + ' .svgError').hide();
+        $(`#${inputIdSelected}`).addClass('inputFormStatusError');
     };
 });
 
@@ -52,8 +47,6 @@ $('#formAddress').submit(function(event) {
 
 $('#btnSendCEP').click(function(event) {
     valuesForm();
-
-    console.log(addressInvalid)
 
     event.preventDefault();
 

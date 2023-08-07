@@ -7,7 +7,7 @@
     padding: 22px 12px 0px 6px;
 }
 
-.multipleInputRowForm { width: 100% }
+.multipleInputRowForm { width: 100%; }
 
 #inputNumberCard { 
     display: flex;

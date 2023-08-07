@@ -1,12 +1,12 @@
-function inputNumberCard() {
-    const inputNumberCard = `<div id="inputNumberCard" class=""></div>`;
+function inputNumberCard(idElement) {
+    const inputNumberCard = `<div class="inputStyling" id="${idElement}"></div>`;
     $('#formCard').append(inputNumberCard);
 };
 
-inputNumberCard();
+inputNumberCard('numberElement');
 
 function inputSecurity() {
-    const multipleInputRowForm = `<div class="multipleInputRowForm" id="cardSecurity"></div>`;
+    const multipleInputRowForm = `<div class="multipleInputRowForm inputStyling" id="cardSecurity"></div>`;
     $('#formCard').append(multipleInputRowForm);
 };
 
@@ -31,7 +31,7 @@ function cardInfo() {
 cardInfo();
 
 function btnAddCard() {
-    const btnAddCard = `<div id="addCard"> <button id="btnAddCard" class="btnFormAccount" type="submit">adicionar cartão</button> </div>`;
+    const btnAddCard = `<div class="inputsAddress"> <button id="btnAddCard" class="btnFormAccount" type="submit">adicionar cartão</button> </div>`;
     $('#formCard').append(btnAddCard);
 };
 

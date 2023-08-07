@@ -34,14 +34,10 @@ $('#numberCard, #btnMonth, #btnYear, #cvvCard, #nameCard, #cpfCard, #nickCard').
 
     if ($(this).val().trim() !== '') {
         $('#' + idParent + ' .svgError').hide();
+        $(`#${inputIdSelected}`).removeClass('inputFormStatusError');
     } else {
         $('#' + idParent + ' .svgError').show();
-    }
-
-    if (validationForm($(this).val())) {
-        addStatusInputsForm(inputIdSelected, idParent, 'digite um cep valido');
-    } else {
-        $(`#${inputIdSelected}`).removeClass('inputFormStatusError');
+        $(`#${inputIdSelected}`).addClass('inputFormStatusError');
     };
 });
 
