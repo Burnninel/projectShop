@@ -21,7 +21,7 @@
 
 
 ### Descrição  
-Este projeto é um sistema de gerenciamento de contas de usuários. Ele permite que os usuários criem contas, acessem suas contas, alterem suas imagens de perfil, cadastrem endereços e busquem informações de CEP. O projeto também inclui um Regex nos inputs dos formulários de endereço e cartão de crédito, bem como um SVG da bandeira do cartão que está sendo incluído.
+O projeto é um sistema de validação de formulários que permite aos usuários criar contas, acessar contas, cadastrar endereços e cartões bancários. Possui funcionalidades extras, como a adição de fotos de perfil, expressões regulares específicas para cada entrada e identificação automática da bandeira do cartão. O sistema é completo, contendo um back-end (PHP) integrado com um banco de dados (MySQL). Contém também um interface responsiva.
 
 
 ### Funcionalidades  
